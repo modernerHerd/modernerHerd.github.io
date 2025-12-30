@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./01_resources/stylesheet.css" />
+    <title>Aaron Höpli | Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Reddit+Mono:wght@200..900&family=Sue+Ellen+Francisco&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+    
+      <span class="nav-logo"><a href="#" id="nav-logo-aaron">Aaron Hoepli</a></span>
+      <div class="nav-text-container">
+        <a href=""><span class="desktop-nav-span">projects</span></a>
+        <a href=""><span class="desktop-nav-span">about me</span></a>
+        <a href=""
+          ><span class="desktop-nav-span" id="nav-contact">contact</span></a
+        >
+      </div>
+
+
+
+      <div class="off-screen-menu">
+        <ul>
+          <li><a href="#">projects</a></li>
+          <li><a href="#">about me</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+   
+    </nav>
+
+    <main>
+      <section>
+        <div class="project-opener-wrapper" id="about-me-opener">
+          <img
+            src="./01_resources/01_media/01_pictures/01_provisorisch/small_GE5Y0IXS.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section class="project-section-description">
+        <div class="project-text-layout" id="forms-project-text-layout">
+          <h2 id="contact-color">contact</h2>
+
+    
+
+            <form action="/api/submit" method="POST">
+            <!-- Access Key links form to your email -->
+            <input type="hidden" 
+                    name="accessKey"
+                    value="9a1412b7394a4a4b11f8e109e97533c1ba5e267a5f9b9094a61aa3415aaa188d">
+
+            <div class="forms-text-wrapper">
+               <label for="name">name:</label>
+               <input type="text" name="name" id="name" placeholder="your name" required />
+            </div>
+            <div class="project-underline" id="underline-margin"></div>
+
+            <div class="forms-text-wrapper">
+               <label for="mail">mail:</label>
+                <input type="email" name="email" id="email" placeholder="thiscouldbeyour@mail.com" required />
+            </div>
+            <div class="project-underline" id="underline-margin"></div>
+
+            <textarea type="text" name="name" id="long-text" placeholder="Now tell me something interesting!" required ></textarea>
+            
+            <button type="submit" class="forms-button">send</button>
+          </form>
+
+          
+        </div>
+
+       
+      </section>
+
+
+    </main>
+
+    <footer>
+      <a href="" class="Footer-Logo"><span>Aaron Höpli</span></a>
+
+      <div class="footer-wrapper">
+        <a href=""><span>Impressum</span></a>
+        <a href=""><span id="footer-contact">contact</span></a>
+        <a href=""><span>Datenschutz</span></a>
+      </div>
+    </footer>
+    <script src="./01_resources/animation.js"></script>
+  </body>
+</html>
