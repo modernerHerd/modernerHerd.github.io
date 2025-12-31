@@ -1,5 +1,3 @@
-console.log("JS is loaded!");
-
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 
@@ -50,5 +48,20 @@ if(result.status === 'success') {
 // Attach the handler to your form (ensure form has id="contactForm")
 const contactForm = document.getElementById('contactForm');
 if(contactForm) { contactForm.addEventListener('submit', submitForm); 
-  
+
 }
+
+ const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(event) {
+        // Formular normal absenden
+        // Eventuell kurz verhindern, falls du es validieren willst:
+        // event.preventDefault();
+
+        // Nach Absenden auf Dankeseite weiterleiten
+        setTimeout(() => {
+            window.location.href = 'merci.html'; // Name deiner Dankeseite
+        }, 100); // kurzer Timeout, damit das Formular noch abgeschickt wird
+    });
+
+      
