@@ -1,12 +1,66 @@
-const hamMenu = document.querySelector(".ham-menu");
-const offScreenMenu = document.querySelector(".off-screen-menu");
+// Warte bis die Seite vollständig geladen ist
+document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger Menu
+    const hamMenu = document.querySelector(".ham-menu");
+    const offScreenMenu = document.querySelector(".off-screen-menu");
+    
+    if (hamMenu && offScreenMenu) {
+        hamMenu.addEventListener("click", () => {
+            hamMenu.classList.toggle("active");
+            offScreenMenu.classList.toggle("active");
+            document.body.classList.toggle("menu-open"); 
+        });
+    }
 
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  offScreenMenu.classList.toggle("active");
-  document.body.classList.toggle("menu-open"); 
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    
+    // Nur ausführen wenn Lightbox existiert
+    if (!lightbox || !lightboxImg) return;
+    
+    // Finde alle Projekt-Bilder
+    const projectImages = document.querySelectorAll('.picture-big, .project-positioning-picture-description-grid img');
+    
+    console.log('Bilder gefunden:', projectImages.length);
+    
+    projectImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        
+        img.addEventListener('click', function() {
+            console.log('Bild geklickt!');
+            lightbox.style.display = 'block';
+            lightboxImg.src = this.src;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Schließen mit X
+    closeBtn.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Schließen mit Hintergrund-Klick
+    lightbox.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Nicht schließen bei Bild-Klick
+    lightboxImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    // ESC-Taste
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 });
-
 
 async function submitForm(event) {
   event.preventDefault(); // Prevent default form submission
@@ -64,4 +118,5 @@ if(contactForm) { contactForm.addEventListener('submit', submitForm);
         }, 100); // kurzer Timeout, damit das Formular noch abgeschickt wird
     });
 
-      
+
+
