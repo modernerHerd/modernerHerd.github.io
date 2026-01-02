@@ -1646,7 +1646,8 @@ form{
 }
 
 #project-grid-2{
-    padding-top: 20vh;
+    padding-top: 20vh !important;
+    border: #BD0000;
 }
 
 #project-p-abstand-contact-button{
