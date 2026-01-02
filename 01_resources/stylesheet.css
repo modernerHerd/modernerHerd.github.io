@@ -560,7 +560,7 @@ div h1, div p{
     height: 2.1rem;
     background-color: var(--color-red);
     border-radius: 0.3rem;
-    margin-top: 7rem;
+    margin-top: 4rem;
     transition: 0.2s ease;
 }
 
@@ -1642,16 +1642,16 @@ form{
 }
 
 #project-grid-1, #project-grid-2{
-    margin: 0 auto;
+    margin: 0vh auto;
 }
 
 #project-grid-2{
-    padding-top: 1vh;
+    padding-top: 7svh;
 }
 
 #project-p-abstand-contact-button{
     margin-top: 0;
-    margin-top: -16rem;
+    margin-top: -11rem;
 }
 
 #project-v-abstand-contact-button{
@@ -1661,6 +1661,11 @@ form{
 
 .contact-button-link{
     margin-top: -7rem;
+}
+
+
+#aboutme-abstand-contact-button{
+    margin-top: 4.5rem;
 }
 
 
