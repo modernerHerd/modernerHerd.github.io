@@ -1516,6 +1516,11 @@ form{
 
 @media (max-width: 395px){
 
+.opener div p, h1{
+    position: relative;
+    top: -5vh;
+}
+
 #nav-logo-aaron{
     font-size: 2rem;
 }
